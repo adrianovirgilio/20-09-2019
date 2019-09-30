@@ -4,15 +4,16 @@
         private $usuario;
         private $senha;
         private $banco;
-        private static $pdo;
+        private $pdo;
      
         public function __construct()
         {
             $this->servidor = "localhost";
             $this->usuario = "root";
             $this->senha = "usbw";
-            $this->banco = "banco";
+            $this->banco = "banco_php";
         }
+
 
         public function conectar(){
             try{              
@@ -21,7 +22,9 @@
             }catch(PDOException $ex){
                 echo $ex;
             }
-        }             
+        } 
+        
+        
     }
 
    
